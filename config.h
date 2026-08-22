@@ -10,14 +10,14 @@ static const unsigned int borderpx         = 1;  /* border pixel of windows */
 static const int showbar                   = 1; /* 0 means no bar */
 static const int topbar                    = 1; /* 0 means bottom bar */
 static const char *fonts[]                 = {"JetBrainsMonoNL Nerd Font Mono:style=Bold:size=16"};
-static const float rootcolor[]             = COLOR(0x000000ff);
+static const float rootcolor[]             = COLOR(0x1a1b26ff); /* Tokyo Night Background */
 /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old behavior */
-static const float fullscreen_bg[]         = {0.0f, 0.0f, 0.0f, 1.0f}; /* You can also use glsl colors */
+static const float fullscreen_bg[]         = {0.02f, 0.02f, 0.04f, 1.0f}; /* Dark matching background */
 static uint32_t colors[][3]                = {
 	/*               fg          bg          border    */
-	[SchemeNorm] = { 0xbbbbbbff, 0x222222ff, 0x444444ff },
-	[SchemeSel]  = { 0xeeeeeeff, 0x005577ff, 0x005577ff },
-	[SchemeUrg]  = { 0,          0,          0x770000ff },
+	[SchemeNorm] = { 0xa9b1d6ff, 0x1a1b26ff, 0x414868ff },
+	[SchemeSel]  = { 0xc0caf5ff, 0x24283bff, 0x7aa2f7ff },
+	[SchemeUrg]  = { 0x1a1b26ff, 0xf7768eff, 0xf7768eff },
 };
 
 /* tagging */

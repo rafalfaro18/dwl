@@ -16,7 +16,7 @@ static const float fullscreen_bg[]         = {0.02f, 0.02f, 0.04f, 1.0f}; /* Dar
 static uint32_t colors[][3]                = {
 	/*               fg          bg          border    */
 	[SchemeNorm] = { 0xa9b1d6ff, 0x1a1b26ff, 0x414868ff },
-	[SchemeSel]  = { 0xc0caf5ff, 0x24283bff, 0x7aa2f7ff },
+	[SchemeSel]  = { 0xc0caf5ff, 0x1a1b26ff, 0x7aa2f7ff },
 	[SchemeUrg]  = { 0x1a1b26ff, 0xf7768eff, 0xf7768eff },
 };
 

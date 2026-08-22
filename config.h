@@ -12,12 +12,12 @@ static const int topbar                    = 1; /* 0 means bottom bar */
 static const char *fonts[]                 = {"JetBrainsMonoNL Nerd Font Mono:style=Bold:size=16"};
 static const float rootcolor[]             = COLOR(0x1a1b26ff); /* Tokyo Night Background */
 /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old behavior */
-static const float fullscreen_bg[]         = {0.02f, 0.02f, 0.04f, 1.0f}; /* Dark matching background */
-static uint32_t colors[][3]                = {
-	/*               fg          bg          border    */
-	[SchemeNorm] = { 0xa9b1d6ff, 0x1a1b26ff, 0x414868ff },
-	[SchemeSel]  = { 0xc0caf5ff, 0x1a1b26ff, 0x7aa2f7ff },
-	[SchemeUrg]  = { 0x1a1b26ff, 0xf7768eff, 0xf7768eff },
+static const float fullscreen_bg[]         = COLOR(0x16161eff); /* Tokyo Night Darker/Black Background */
+static uint32_t colors[][3] = {
+	/*               fg         bg         border   */
+	[SchemeNorm]   = { 0xa9b1d6ff, 0x1a1b26ff, 0x414868ff }, /* Text Blue-Gray, Dark BG, Dark Gray Border */
+	[SchemeSel]    = { 0x7aa2f7ff, 0x24283bff, 0xbb9af7ff }, /* Bright Blue Text, Storm BG, Bright Purple Border */
+	[SchemeUrg]    = { 0xf7768eff, 0x1a1b26ff, 0xf7768eff }, /* Bright Red Text, Dark BG, Bright Red Border */
 };
 
 /* tagging */

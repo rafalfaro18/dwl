@@ -123,7 +123,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
 static const char *menucmd[] = { "wmenu-run",
-	"-f", "JetBrainsMonoNL Nerd Font Mono 16"
+	"-f", "JetBrainsMonoNL Nerd Font Mono 16",
 NULL };
 
 static const Key keys[] = {

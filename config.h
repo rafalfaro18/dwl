@@ -131,6 +131,9 @@ static const char *menucmd[] = { "wmenu-run",
 NULL };
 static const char *lockcmd[] = { "waylock", NULL };
 static const char *notification_choose[] = { "makoctl", "menu", "wmenu", NULL };
+static const char *notification_hide[] = { "makoctl", "dismiss", NULL };
+static const char *notification_hide_all[] = { "makoctl", "dismiss", "-a", NULL };
+static const char *notification_pop_last[] = { "makoctl", "restore", NULL };
 static const char *screenshot_all[] = { "sh", "-c", "grim ~/Pictures/$(date +'%m-%d-%Y-%H%M%S').png", NULL };
 
 static const Key keys[] = {
@@ -141,6 +144,9 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_l,           spawn,            {.v = lockcmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_s,           spawn,            {.v = screenshot_all} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_i,           spawn,            {.v = notification_choose} },
+	{ MODKEY,                    XKB_KEY_x,           spawn,            {.v = notification_hide} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_x,           spawn,            {.v = notification_hide_all} },
+	{ MODKEY,                    XKB_KEY_n,           spawn,            {.v = notification_pop_last} },
 	{ MODKEY,                    XKB_KEY_b,           togglebar,        {0} },
 	{ MODKEY,                    XKB_KEY_j,           focusstack,       {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,           focusstack,       {.i = -1} },

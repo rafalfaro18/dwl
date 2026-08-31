@@ -130,6 +130,7 @@ static const char *menucmd[] = { "wmenu-run",
 	"-f", "JetBrainsMonoNL Nerd Font Mono 16",
 NULL };
 static const char *lockcmd[] = { "waylock", NULL };
+static const char *notification_choose[] = { "makoctl", "menu", "wmenu", NULL };
 static const char *screenshot_all[] = { "sh", "-c", "grim ~/Pictures/$(date +'%m-%d-%Y-%H%M%S').png", NULL };
 
 static const Key keys[] = {
@@ -139,6 +140,7 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,      spawn,            {.v = termcmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_l,           spawn,            {.v = lockcmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_s,           spawn,            {.v = screenshot_all} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_i,           spawn,            {.v = notification_choose} },
 	{ MODKEY,                    XKB_KEY_b,           togglebar,        {0} },
 	{ MODKEY,                    XKB_KEY_j,           focusstack,       {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,           focusstack,       {.i = -1} },

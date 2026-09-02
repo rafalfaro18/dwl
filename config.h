@@ -10,6 +10,8 @@ static const int smartgaps                 = 0;  /* 1 means no outer gap when th
 static int gaps                            = 1;  /* 1 means gaps between windows are added */
 static const unsigned int gappx            = 10; /* gap pixel between windows */
 static const unsigned int borderpx         = 1;  /* border pixel of windows */
+static const unsigned int systrayspacing   = 2; /* systray spacing */
+static const int showsystray               = 1; /* 0 means no systray */
 static const int window_title              = 0;  /* 1 means showing window titles on the bar */
 static const int showbar                   = 1; /* 0 means no bar */
 static const int topbar                    = 1; /* 0 means bottom bar */
@@ -126,9 +128,8 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { "wmenu-run",
-	"-f", "JetBrainsMonoNL Nerd Font Mono 16",
-NULL };
+static const char *menucmd[] = { "wmenu-run", "-f", "JetBrainsMonoNL Nerd Font Mono 16", NULL };
+static const char *dmenucmd[] = { "wmenu", NULL };
 static const char *lockcmd[] = { "waylock", NULL };
 static const char *notification_choose[] = { "makoctl", "menu", "wmenu", NULL };
 static const char *notification_hide[] = { "makoctl", "dismiss", NULL };
@@ -203,4 +204,6 @@ static const Button buttons[] = {
 	{ ClkTagBar,   0,      BTN_RIGHT,  toggleview,     {0} },
 	{ ClkTagBar,   MODKEY, BTN_LEFT,   tag,            {0} },
 	{ ClkTagBar,   MODKEY, BTN_RIGHT,  toggletag,      {0} },
+	{ ClkTray,     0,      BTN_LEFT,   trayactivate,   {0} },
+	{ ClkTray,     0,      BTN_RIGHT,  traymenu,       {0} },
 };

@@ -765,7 +765,7 @@ bufrelease(struct wl_listener *listener, void *data)
 void
 buttonpress(struct wl_listener *listener, void *data)
 {
-	unsigned int i = 0, x = 0, ti = 0;
+	unsigned int i = 0, x = 0, occ = 0, ti = 0;
 	double cx, tx = 0;
 	unsigned int click;
 	struct wlr_pointer_button_event *event = data;
